@@ -5,8 +5,8 @@ import javax.swing.*;
 public class StopWatch implements ActionListener {
 
     JFrame frame = new JFrame();
-    JButton startButton = new JButton("Start");
-    JButton resetButton = new JButton("Reset");
+    JButton startButton = new JButton("START");
+    JButton resetButton = new JButton("RESET");
     JLabel timeLabel = new JLabel();
     int elapsedTime = 0;
     int seconds = 0;
@@ -65,7 +65,17 @@ public class StopWatch implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         if(e.getSource()==startButton) {
-            start();
+
+            if(started==false) {
+                started=true;
+                startButton.setText("STOP");
+                start();
+            }
+            else {
+                started=false;
+                startButton.setText("START");
+                stop();
+            }
         }
 
     }
@@ -75,7 +85,7 @@ public class StopWatch implements ActionListener {
     }
 
     void stop() {
-
+        timer.stop();
     }
 
     void reset(){
