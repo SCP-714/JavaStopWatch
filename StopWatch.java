@@ -9,9 +9,19 @@ public class StopWatch implements ActionListener {
     JButton resetButton = new JButton("Reset");
     JLabel timeLabel = new JLabel();
     int elapsedTime = 0;
+    int seconds = 0;
+    int minutes = 0;
+    int hours = 0;
+    boolean started = false;
+    String seconds_string = String.format("%02d", seconds);
+    String minutes_string = String.format("%02d", minutes);
+    String hours_string = String.format("%02d", hours);
     StopWatch(){
-
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(425,425);
+        frame.setLayout(null);
     }
+
     @overide
     public void actionPerformed(ActionEvent e) {
 
