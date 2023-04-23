@@ -20,9 +20,10 @@ public class StopWatch implements ActionListener {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(425,425);
         frame.setLayout(null);
+        frame.setVisible(true);
     }
 
-    @overide
+
     public void actionPerformed(ActionEvent e) {
 
     }
