@@ -64,10 +64,14 @@ public class StopWatch implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
 
+        if(e.getSource()==startButton) {
+            start();
+        }
+
     }
 
     void start() {
-
+        timer.start();
     }
 
     void stop() {
